@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CALC-01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calc-styles.css">
+</head>
+<body>
+
+  <div class="crt-wrap">
+    <!-- CRT effects -->
+    <div class="scanlines"></div>
+    <div class="crt-vignette"></div>
+    <div class="crt-flicker"></div>
+
+    <div class="terminal">
+
+      <!-- HEADER -->
+      <div class="term-header">
+        <span class="term-title">CALC-01 <span class="blink">█</span></span>
+        <span class="term-meta">v1.0.0 // READY</span>
+      </div>
+
+      <!-- MAIN LAYOUT -->
+      <div class="calc-layout">
+
+        <!-- LEFT: CALCULATOR -->
+        <div class="calc-side">
+
+          <!-- DISPLAY -->
+          <div class="display">
+            <div class="display-expr" id="expression">&nbsp;</div>
+            <div class="display-main" id="display">0</div>
+          </div>
+
+          <!-- KEYPAD -->
+          <div class="keypad">
+
+            <!-- Row 1 -->
+            <button class="key key-fn"   data-action="clear">AC</button>
+            <button class="key key-fn"   data-action="sign">+/−</button>
+            <button class="key key-fn"   data-action="percent">%</button>
+            <button class="key key-op"   data-action="operator" data-value="/">÷</button>
+
+            <!-- Row 2 -->
+            <button class="key key-num"  data-action="number" data-value="7">7</button>
+            <button class="key key-num"  data-action="number" data-value="8">8</button>
+            <button class="key key-num"  data-action="number" data-value="9">9</button>
+            <button class="key key-op"   data-action="operator" data-value="*">×</button>
+
+            <!-- Row 3 -->
+            <button class="key key-num"  data-action="number" data-value="4">4</button>
+            <button class="key key-num"  data-action="number" data-value="5">5</button>
+            <button class="key key-num"  data-action="number" data-value="6">6</button>
+            <button class="key key-op"   data-action="operator" data-value="-">−</button>
+
+            <!-- Row 4 -->
+            <button class="key key-num"  data-action="number" data-value="1">1</button>
+            <button class="key key-num"  data-action="number" data-value="2">2</button>
+            <button class="key key-num"  data-action="number" data-value="3">3</button>
+            <button class="key key-op"   data-action="operator" data-value="+">+</button>
+
+            <!-- Row 5 -->
+            <button class="key key-num key-zero" data-action="number" data-value="0">0</button>
+            <button class="key key-num"  data-action="decimal">.</button>
+            <button class="key key-eq"   data-action="equals">=</button>
+
+          </div>
+
+          <!-- KEYBOARD HINT -->
+          <div class="kb-hint">// keyboard supported</div>
+
+        </div>
+
+        <!-- RIGHT: HISTORY -->
+        <div class="history-side">
+          <div class="history-header">
+            <span>HISTORY</span>
+            <button class="clear-hist-btn" id="clearHistory">CLR</button>
+          </div>
+          <div class="history-list" id="historyList">
+            <div class="history-empty" id="historyEmpty">
+              <span>NO RECORDS YET_</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="calc-script.js"></script>
+</body>
+</html>
